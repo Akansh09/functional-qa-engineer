@@ -100,6 +100,8 @@ Then just ask. It triggers on requests like:
 - "Is this a bug or expected?"
 - "You missed this: …"
 
+**Script-free edition.** [`directory/functional-qa-engineer/`](directory/functional-qa-engineer) is the same skill with no scripts, made for the Claude plugin directory (which accepts only Markdown, JSON, YAML and images from unverified publishers). Every gate and probe becomes a step-by-step procedure in [`manual-gates.md`](skills/functional-qa-engineer/references/manual-gates.md), and the lessons it learns are saved in your project under `qa-knowledge/`. It's generated from the full edition by `tools/build_directory_edition.py`, and CI fails if it falls out of date.
+
 **Requirements:** Python 3.10+ (standard library only). Browser testing needs [Playwright MCP](https://github.com/microsoft/playwright-mcp).
 
 ## What's inside

@@ -16,6 +16,7 @@ Reference files, read as needed:
 - `references/learning-loop.md` — **what to do when someone gives you a bug you missed** (or you make a process mistake): classify why, generalise, record it in the knowledge graph, apply it retroactively.
 - `knowledge/graph.json` (+ generated `knowledge/GRAPH.md`) — the knowledge graph: bugs → why missed → lessons → mandatory checks → surfaces/oracles. Grows with every miss. Edit only through `scripts/kb.py`.
 - `scripts/` — browser (Playwright MCP, `browser_run_code_unsafe` with `filename`): `sentinel_start.js` / `sentinel_report.js` (console + network errors all session), `surface_inventory.js`, `cta_destinations.js`, `raw_values.js`, `loading_sweep.js`, `flicker_scan.js`, `contrast_scan.js` (via `browser_evaluate`). Python: `coverage.py` (100% gate), `prereport.py` (bug gate), `kb.py` (knowledge graph), `testgen.py` (BVA/EP/pairwise/states). **Playwright MCP can only read files inside the project**, so run `sh <skill>/scripts/stage.sh` once per session and pass `.playwright-mcp/qa/<script>.js`. Per-run options go in `page.context().__qaArgs`.
+- `references/manual-gates.md` — the same gates and probes as step-by-step instructions, for when the scripts can't run (no Python, no file access, or the script-free directory edition).
 - `selftest/` — the skill's own test suite: one fixture per learned miss plus checks of the gates and generators. `sh <skill>/selftest/selftest.sh`, then run `.playwright-mcp/qa/selftest.js`; every lesson must pass.
 
 ## Non-negotiables

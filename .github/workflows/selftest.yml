@@ -28,5 +28,7 @@ jobs:
           python -I scripts/kb.py render --out /tmp/GRAPH.md
           diff <(sed 3d knowledge/GRAPH.md) <(sed 3d /tmp/GRAPH.md) && echo "GRAPH.md up to date" \
             || { echo "::error::GRAPH.md is stale - run: python3 scripts/kb.py render"; exit 1; }
+      - name: Directory edition is up to date and holds only allowed files
+        run: python -I tools/build_directory_edition.py --check
       - name: Browser self-test harness builds
         run: python -I skills/functional-qa-engineer/selftest/build_selftest.py /tmp/selftest.js && test -s /tmp/selftest.js

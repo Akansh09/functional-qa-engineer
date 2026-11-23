@@ -1,0 +1,21 @@
+{
+  "name": "functional-qa-engineer",
+  "description": "Functional QA engineer for Claude Code (script-free edition): tests features end to end, enforces a 100% coverage gate, blocks weak bug reports, and learns from every bug it misses.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Akansh09",
+    "url": "https://github.com/Akansh09"
+  },
+  "homepage": "https://github.com/Akansh09/functional-qa-engineer",
+  "repository": "https://github.com/Akansh09/functional-qa-engineer",
+  "license": "MIT",
+  "keywords": [
+    "qa",
+    "functional-testing",
+    "testing",
+    "test-design",
+    "regression",
+    "playwright",
+    "bug-report"
+  ]
+}
