@@ -1,0 +1,20 @@
+{
+  "name": "akansh09",
+  "owner": { "name": "Akansh09", "url": "https://github.com/Akansh09" },
+  "metadata": {
+    "description": "Functional QA skills for Claude Code.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "functional-qa-engineer",
+      "source": "./",
+      "description": "Functional QA engineer: end-to-end feature testing, 100% coverage gate, pre-report bug gate, 21 oracles, and a knowledge graph that learns from every missed bug.",
+      "version": "1.0.0",
+      "author": { "name": "Akansh09", "url": "https://github.com/Akansh09" },
+      "homepage": "https://github.com/Akansh09/functional-qa-engineer",
+      "category": "testing",
+      "tags": ["qa", "functional-testing", "testing", "regression", "test-design", "playwright"]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+name: New oracle, technique or check
+description: Propose a new way for the skill to find functional bugs.
+title: "[idea] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The oracle / technique / check
+      description: What it asserts and how to apply it.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: A real bug it would catch
+    validations:
+      required: true

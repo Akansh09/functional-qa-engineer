@@ -1,0 +1,24 @@
+name: Skill or script bug
+description: A script, gate, generator or self-test does not work.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      placeholder: scripts/coverage.py, scripts/flicker_scan.js, selftest ...
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Command and output
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: macOS 15, Python 3.12, Claude Code 2.x, Playwright MCP 0.x

@@ -1,0 +1,22 @@
+name: False alarm or wrong judgement
+description: The skill reported something as a bug that was not one (expected behaviour, probe error, wrong severity).
+title: "[false-alarm] "
+labels: ["false-alarm", "learning-loop"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Do not paste credentials, tokens, customer data or private URLs.**"
+  - type: textarea
+    id: report
+    attributes:
+      label: What the skill reported
+      description: The bug card (title, severity, steps) it produced.
+    validations:
+      required: true
+  - type: textarea
+    id: why-wrong
+    attributes:
+      label: Why it is not a bug (or why the severity is wrong)
+      description: e.g. owner says it is by design, only reachable via a crafted API call, the probe clicked a hidden element.
+    validations:
+      required: true

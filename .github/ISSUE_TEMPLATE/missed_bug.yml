@@ -1,0 +1,48 @@
+name: Bug the skill missed
+description: You found a functional bug by hand that the skill should have caught. This feeds the learning loop.
+title: "[missed] "
+labels: ["missed-bug", "learning-loop"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every missed bug becomes a lesson + mandatory check in `knowledge/graph.json`, so the same class of bug is never missed again.
+        **Do not paste credentials, tokens, customer data or private URLs.** Describe the product generically if it is not public.
+  - type: textarea
+    id: bug
+    attributes:
+      label: The bug you found
+      description: Steps, expected vs actual. Generic product description is fine.
+      placeholder: |
+        1. Open the Orders list, turn on the hidden "Priority" column
+        2. ...
+        Expected: labels (High/Medium/Low). Actual: raw numbers 3/2/0.
+    validations:
+      required: true
+  - type: textarea
+    id: what-skill-did
+    attributes:
+      label: What the skill did
+      description: What it tested, reported or signed off on. Paste the coverage report line if you have it.
+    validations:
+      required: true
+  - type: dropdown
+    id: cause
+    attributes:
+      label: Why do you think it was missed?
+      options:
+        - coverage-gap (that page/state/control was never tested)
+        - oracle-gap (it looked at it but had no rule to flag it)
+        - baseline-gap (it did not know this was expected behaviour)
+        - instrument-gap (the probe/script could not see it)
+        - probe-error (the probe misread the page)
+        - judgement (it saw it and called it wrong)
+        - not sure
+    validations:
+      required: true
+  - type: textarea
+    id: lesson
+    attributes:
+      label: Suggested lesson / check (optional)
+      description: The general rule that would have caught it on any product.
+      placeholder: Turn on every optional column at least once and check its values are labels, not raw enums.
